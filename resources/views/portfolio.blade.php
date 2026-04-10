@@ -67,6 +67,7 @@
   .project-desc { font-size: 0.85rem; color: var(--white-dim); line-height: 1.65; }
   .project-status { margin-top: 1rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; }
   .project-tech { margin-top: 0.5rem; font-size: 0.75rem; color: var(--muted); }
+  .project-empty { padding: 2.5rem 1.5rem; border: 1px dashed var(--border); border-radius: 12px; color: var(--white-dim); font-size: 0.95rem; background: rgba(255,255,255,0.02); grid-column: 1/-1; text-align: center; }
   .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
   .contact-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; display: flex; align-items: center; gap: 1rem; text-decoration: none; transition: border-color 0.2s, transform 0.2s; backdrop-filter: blur(8px); }
   .contact-item:hover { border-color: var(--accent); transform: translateY(-2px); }
@@ -201,14 +202,18 @@
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
-      @foreach($projects as $project)
+      @forelse($projects as $project)
       <div class="project-card">
         <div class="project-name">{{ $project->name }}</div>
         <div class="project-desc">{{ $project->description }}</div>
         <div class="project-tech">{{ $project->tech_stack }}</div>
         <div class="project-status">// {{ $project->status }}</div>
       </div>
-      @endforeach
+      @empty
+      <div class="project-empty">
+        Tiada projek untuk dipaparkan. Sila jalankan `php artisan migrate --seed` pada pangkalan data Railway anda.
+      </div>
+      @endforelse
     </div>
   </section>
 
