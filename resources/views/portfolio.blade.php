@@ -107,7 +107,7 @@
         box-shadow:0 0 0 6px var(--accent-dim);">
       <div>
         <p class="hero-tag">// Available for opportunities</p>
-        <h1 class="hero-name">Nur Iman <span>Wafi</span><br>Zubairi</h1>
+        <h1 class="hero-name">Nur Iman Wafi <span>Mohd Zubairi</span><br></h1>
         <p class="hero-tagline">Network & Systems Enthusiast &nbsp;·&nbsp; IT Security &nbsp;·&nbsp; Fresh Graduate</p>
       </div>
     </div>
