@@ -11,16 +11,16 @@ class ProjectSeeder extends Seeder
     {
         Project::create([
             'name' => 'Navi-KV',
-            'description' => 'A campus navigation web app designed exclusively for Kolej Vokasional Sungai Buloh. Built to help new students and visitors navigate the campus grounds with ease, featuring interactive routing and location-based guidance.',
+            'description' => 'A digital campus navigation system for Kolej Vokasional Sungai Buloh, built to help students and visitors locate campus facilities. The project included User Acceptance Testing, technical deployment, database integration, and network connectivity checks.',
             'status' => 'Final Year Project',
-            'tech_stack' => 'HTML, CSS, JavaScript',
+            'tech_stack' => 'Python Flask, JavaScript, HTML, CSS, Database Integration',
         ]);
 
         Project::create([
             'name' => 'Semester Projects',
-            'description' => 'A growing collection of coursework projects completed across multiple semesters — spanning databases, networking labs, web development, and system configuration exercises.',
+            'description' => 'A growing collection of coursework projects completed across multiple semesters, spanning database management, Cisco networking labs, web development, server configuration, and system troubleshooting exercises.',
             'status' => 'Ongoing',
-            'tech_stack' => 'Java, MySQL, HTML, WordPress',
+            'tech_stack' => 'Java, MySQL, HTML, WordPress, Cisco Packet Tracer, Linux',
         ]);
     }
 }
