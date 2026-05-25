@@ -6,6 +6,7 @@ RUN apt-get update \
         unzip \
         libzip-dev \
         libonig-dev \
+        sqlite3 \
         curl \
     && docker-php-ext-install pdo_mysql pdo_sqlite mbstring zip \
     && apt-get clean \
